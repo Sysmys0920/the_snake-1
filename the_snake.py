@@ -47,6 +47,11 @@ class GameObject:
         else:
             self.position = position
 
+def draw(self, surface):
+    pass
+
+
+
 def main():
     # Инициализация PyGame:
     pygame.init()
