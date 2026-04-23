@@ -50,7 +50,22 @@ class GameObject:
 def draw(self, surface):
     pass
 
+class Apple(GameObject):
+    super().__init__(position=None, body_color=APPLE_COLOR)
+    self.randomize_position()
 
+    def randomize_position(self):
+        max_x = 640 - 20
+        max_y = 480 - 20
+
+        x.random.randrage(0, max_x + 1, 20)
+        y.random.randrage(0, max_y + 1, 20)
+
+        self.position = (x, y)
+
+    def draw(self, surface):
+        rect = pygame.Rect(self.position[0], self.position[1], 20, 20)
+        pygame.draw.rect(surface, self.body_color, rect)
 
 def main():
     # Инициализация PyGame:
